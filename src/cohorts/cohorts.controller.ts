@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Body,
+  Param,
+} from '@nestjs/common';
 import { Cohort } from './cohort.entity';
 import { CohortsService } from './cohorts.service';
 
@@ -19,7 +27,7 @@ export class CohortsController {
   @Put(':id/update')
   async update(@Param('id') id, @Body() cohortData: Cohort): Promise<any> {
     cohortData.id = Number(id);
-    console.log('Update #' + cohortData.id)
+    // console.log('Update #' + cohortData.id);
     return this.cohortsService.update(cohortData);
   }
 
