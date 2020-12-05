@@ -13,12 +13,12 @@ export class CohortsService {
     return await this.cohortRepository.find();
   }
 
-  async create(contact: Cohort): Promise<Cohort> {
-    return await this.cohortRepository.save(contact);
+  async create(cohort: Cohort): Promise<Cohort> {
+    return await this.cohortRepository.save(cohort);
   }
 
-  async update(contact: Cohort): Promise<UpdateResult> {
-    return await this.cohortRepository.update(contact.id, contact);
+  async update(cohort: Cohort): Promise<UpdateResult> {
+    return await this.cohortRepository.update(cohort.id, cohort);
   }
 
   async delete(id): Promise<DeleteResult> {
