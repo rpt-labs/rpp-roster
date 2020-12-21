@@ -1,18 +1,20 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CohortsModule } from './cohorts/cohorts.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CohortsModule } from './cohorts/cohorts.module';
+import { StudentsModule } from './students/students.module';
 
 @Module({
   imports: [
     CohortsModule,
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'db',
+      database: 'rpt-roster',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    StudentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
