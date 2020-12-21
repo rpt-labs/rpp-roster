@@ -6,14 +6,74 @@ export class Cohort {
   id: number;
 
   @Column()
-  cohortName: string;
+  cohort_id: string;
+
+  @Column({ nullable: true })
+  learn_id: number;
+
+  @Column({ nullable: true })
+  product_code: string;
+
+  @Column({ nullable: true })
+  rotation_id: string;
+
+  @Column({ nullable: true })
+  schedule: string;
 
   @Column()
-  cohortId: number;
+  start_date: Date;
 
   @Column()
-  startDate: string;
+  grad_date: Date;
 
-  @Column()
-  endDate: string;
+  @Column({ nullable: true })
+  fifty_percent: Date;
+
+  @Column({ nullable: true })
+  sixty_percent: Date;
+
+  @Column({ nullable: true })
+  google_calendar_id: string;
+
+  @Column({ nullable: true })
+  cohort_lead: string;
+
+  @Column({ nullable: true })
+  tech_mentor: string;
+
+  @Column({ nullable: true })
+  senior_phase_begins: Date;
+
+  @Column({ nullable: true })
+  fec_start: Date;
+
+  @Column({ nullable: true })
+  sdc_start: Date;
+
+  @Column({ nullable: true })
+  outcome_start: Date;
+
+  @Column({ nullable: true })
+  solo_1_start: Date;
+
+  @Column({ nullable: true })
+  solo_1_end: Date;
+
+  @Column({ nullable: true })
+  solo_2_start: Date;
+
+  @Column({ nullable: true })
+  solo_2_end: Date;
+
+  @Column({ nullable: true })
+  holiday_1_start: Date;
+
+  @Column({ nullable: true })
+  holiday_1_end: Date;
+
+  @Column({ nullable: true })
+  holiday_2_start: Date;
+
+  @Column({ nullable: true })
+  holiday_2_end: Date;
 }
