@@ -5,7 +5,7 @@ export class Student {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ nullable: true })
+  @Column({ default: 'candidate' })
   status: string;
 
   @Column()
@@ -45,13 +45,13 @@ export class Student {
   date_of_separation: Date;
 
   @Column({ nullable: true })
-  seir: string;
+  seir: boolean;
 
   @Column({ nullable: true })
   pronouns: string;
 
   @Column({ nullable: true })
-  has_accommodations: string;
+  has_accommodations: boolean;
 
   @Column({ nullable: true })
   salesforce_contact_record: string;
